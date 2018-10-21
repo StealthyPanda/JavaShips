@@ -20,7 +20,7 @@ class Board{
 			for(int cols = 0; cols < c; cols++){
 				System.out.print(board_array[rows][cols] + " ");
 			}
-			System.out.println("\n");
+			System.out.println();
 		}
 
 
@@ -36,13 +36,13 @@ class Board{
 	}
 
 
-	void setchar(char character, int now, int nol){
+	void setcharAt(char character, int now, int nol){
 		now--;
 		nol--;
 		board_array[now][nol] = character;
 	}
 
-	char getchar(int now, int nol){
+	char getcharAt(int now, int nol){
 		now--;
 		nol--;
 		char retchar = board_array[now][nol];

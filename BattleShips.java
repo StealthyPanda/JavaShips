@@ -3,31 +3,38 @@
 class BattleShips{
 	public static void main(String[] args) {
 
-
+		start();
 		
 
 		
+	}
+
+	static void start(){
+
+		BattleBoard b_player1 = new BattleBoard();
+		b_player1.setchar('O');
+		b_player1.display();
+
 	}
 
 
 }
 
 
-class BattleBoard{
+class BattleBoard extends Board{
 
-	private Board b_board;
+	//private Board b_board;
 
 	public BattleBoard(int x, int y){
 
-		b_board = new Board(x, y);
+		super(x, y);
 
 	}
 
 	public BattleBoard(){
 
-		b_board = new Board(5, 5);
+		super(5, 5);
 
 	}
-
 
 }
