@@ -1,4 +1,4 @@
-//package BattleShips;
+import java.io.*;
 
 class Board{
 
@@ -80,6 +80,40 @@ class Console{
 
 		public static void print(Object ob){
 			System.out.print(ob);
+		}
+
+		public static String write(String filepath, char[] data){
+
+			String err = "";
+			//FileOutputStream out = new FileOutputStream("def.txt");
+
+			try{
+				FileOutputStream out = new FileOutputStream(filepath);
+
+				int ran;
+
+
+
+
+
+
+				for (int i = 0; i < data.length; i++){
+
+					byte b = (byte) data[i];
+					try{
+						out.write(b);
+					} catch (Exception e){}
+				}
+
+
+			} catch (FileNotFoundException e){
+				err =  "File not found!";
+			} catch (Exception e){
+				err = "WTF I CANT UNDERSTAND THIS WHATS HAPPENING";
+			}
+
+			return err;
+
 		}
 
 }

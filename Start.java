@@ -1,5 +1,5 @@
 import java.util.*;
-//import java.util.IO.*;
+import java.io.*;
 
 class Start{
 
@@ -19,14 +19,26 @@ class Start{
 		Console.println(nick1 + " and " + nick2);
 
 		stop();
+		/*FileOutputStream out = new FileOutputStream("holder.txt");
+		for (int i = 0; i < nick1.Length; i++){
+
+			byte b = (byte) nick1[i];
+
+
+		}*/
+		Console.println("Attempting to write...");
+		Console.write("nick1.txt", nick1); Console.write("nick2.txt", nick2);
 
 
 
+
+		stop();
 	}
 
 	static String stop(){
 		return input.nextLine();
 	}
+
 
 
 }
