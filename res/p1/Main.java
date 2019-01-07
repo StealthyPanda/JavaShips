@@ -1,5 +1,8 @@
+package JavaShips.res.p1;
+
 import java.util.*;
 import java.io.*;
+import JavaShips.ImpClasses.*;
 
 class Main {
 
@@ -7,7 +10,8 @@ class Main {
 
     Random rand = new Random();
     int x1 = rand.nextInt(1000)%5+1, y1 = rand.nextInt(1000)%5+1, x2 = rand.nextInt(1000)%5+1, y2 = rand.nextInt(1000)%5+1, x3 = rand.nextInt(1000)%5+1, y3 = rand.nextInt(1000)%5+1;
-    System.out.println(""+x1+y1+"\n"+x2+y2+"\n"+x3+y3);
+	BattleBoard b = new BattleBoard('O');
+	b.display();
 
   }
 

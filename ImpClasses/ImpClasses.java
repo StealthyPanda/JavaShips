@@ -1,3 +1,5 @@
+package JavaShips.ImpClasses;
+
 import java.io.*;
 
 class Board{
